@@ -1,0 +1,925 @@
+/* Hero Section Layout */
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 48px;
+    padding-top: 32px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Badge Accent */
+.hero-badge {
+    display: inline-flex;
+    display: none;
+    align-items: center;
+    gap: 6px;
+    background: #176b4f;
+    color: #ffffff;
+    font-family: 'Inter Bold', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 2px solid #2d3436;
+    box-shadow: 2px 2px 0px #2d3436;
+    margin-bottom: 20px;
+}
+
+/* Heading & Text */
+.hero .intro {
+    font-size: clamp(42px, 5.5vw, 70px);
+    color: #2d3436;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    font-family: var(--ideal-ff), 'Inter Bold';
+    margin-bottom: 16px;
+}
+
+.hero .unik-txt {
+    color: #176b4f;
+    background: linear-gradient(120deg, rgba(230, 159, 28, 0.25) 0%, rgba(230, 159, 28, 0.25) 100%);
+    padding: 0 6px;
+    border-radius: 6px;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    max-width: 520px;
+}
+
+/* Hero Action Buttons */
+.hero .cta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    font-family: 'Inter Extra Bold', 'Inter Bold', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: 2.5px solid #2d3436;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+}
+
+.hero-btn.primary {
+    background: #176b4f;
+    color: #ffffff;
+    box-shadow: 4px 4px 0px #2d3436;
+}
+
+.hero-btn.primary:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #2d3436;
+    background: #0f4a36;
+}
+
+.hero-btn.secondary {
+    background: #ffffff;
+    color: #2d3436;
+    box-shadow: 4px 4px 0px #2d3436;
+}
+
+.hero-btn.secondary:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #2d3436;
+    background: #f8f8ff;
+}
+
+/* Hero Image Card Frame */
+.hero-image-card {
+    background: #ffffff;
+    border: 2.5px solid #2d3436;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 6px 6px 0px #2d3436;
+}
+
+.image-inner {
+    border: 2px solid #2d3436;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f8f8ff;
+}
+
+.image-inner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/* Helper Utilities */
+.green-text {
+    color: var(--try-clr);
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.section-head h2 {
+    font-size: clamp(38px, 5vw, 66px);
+    line-height: 0.96;
+    letter-spacing: -0.075em;
+    font-weight: 1000;
+    margin: 0;
+}
+
+.section-head p {
+    max-width: 360px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Eyebrow Tag */
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    background: var(--paper);
+    border: 2px solid var(--sec-clr);
+    border-radius: 999px;
+    box-shadow: 3px 3px 0 var(--sec-clr);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.eyebrow::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: var(--acc-clr);
+    border: 1.5px solid var(--sec-clr);
+    border-radius: 50%;
+}
+
+/* Steps Grid Layout */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* Base Step Card */
+.step {
+    min-height: 280px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--paper);
+    border: 3px solid var(--sec-clr);
+    border-radius: 22px;
+    box-shadow: 5px 5px 0 var(--sec-clr);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* "Chaotic" Custom Styling per Card */
+.step-1 {
+    background: var(--paper);
+    transform: rotate(-0.5deg);
+}
+
+.step-2 {
+    background: var(--mint);
+    transform: translateY(20px) rotate(-1.5deg);
+}
+
+.step-3 {
+    background: var(--sky);
+    transform: translateY(-8px) rotate(1.2deg);
+}
+
+/* Hover Effects */
+.step:hover {
+    transform: translateY(-6px) rotate(0deg);
+    box-shadow: 8px 8px 0 var(--sec-clr);
+}
+
+/* Inner Elements */
+.step-no {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: var(--try-clr);
+    color: #ffffff;
+    border: 2px solid var(--sec-clr);
+    border-radius: 14px;
+    box-shadow: 3px 3px 0 var(--sec-clr);
+    font-size: 17px;
+    font-weight: 1000;
+}
+
+.step h3 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-size: 25px;
+    letter-spacing: -0.05em;
+    font-weight: 900;
+}
+
+.step p {
+    margin-top: 9px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 650;
+    line-height: 1.5;
+}
+
+.step-link {
+    font-size: 13px;
+    font-weight: 900;
+    color: var(--sec-clr);
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+
+/* Ensure relative positioning for floating absolute shapes */
+.quote-fullwidth-section {
+    position: relative;
+    overflow: hidden;
+    /* Prevents shapes from causing horizontal scroll */
+}
+
+/* Floating Star (Top Right) */
+.quote-star-shape {
+    position: absolute;
+    top: 36px;
+    right: 52px;
+    font-size: 32px;
+    color: #ffffff;
+    text-shadow: 2.5px 2.5px 0px #1a1a1a;
+    transform: rotate(-12deg);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Floating Pill (Bottom Left) */
+.quote-pill-shape {
+    position: absolute;
+    bottom: 28px;
+    left: 40px;
+    width: 48px;
+    height: 22px;
+    background: #176b4f;
+    /* Primary Green */
+    border: 2.5px solid #1a1a1a;
+    border-radius: 999px;
+    box-shadow: 3px 3px 0px #1a1a1a;
+    transform: rotate(18deg);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Floating Cross (Top Left) */
+.quote-cross-shape {
+    position: absolute;
+    top: 32px;
+    left: 48px;
+    font-size: 28px;
+    font-size: 40px;
+    color: #ffffff;
+    text-shadow: 2.5px 2.5px 0px #1a1a1a;
+    transform: rotate(15deg);
+    pointer-events: none;
+    user-select: none;
+}
+
+
+/* 1. FULL BLEED CONTAINER (Breaks out to 100% viewport width) */
+.quote-fullwidth-section {
+    width: 99vw;
+    margin-left: calc(-50vw + 50%);
+    /* Pulls section past parent container padding */
+    margin-right: calc(-50vw + 50%);
+    background: #e69f1c;
+    /* High-impact solid gold expanse */
+    border-top: 4px solid #1a1a1a;
+    border-bottom: 4px solid #1a1a1a;
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+
+/* 2. INNER LAYOUT CONTAINER */
+.quote-fullwidth-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    /* Gives typography side generous negative space */
+    gap: 60px;
+    align-items: center;
+}
+
+/* 3. LEFT TYPOGRAPHY BLOCK */
+.quote-hero-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.quote-hero-side .section-tag {
+    background: #176b4f;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 6px 14px;
+    border: 2px solid #1a1a1a;
+    border-radius: 999px;
+    box-shadow: 2px 2px 0px #1a1a1a;
+    letter-spacing: 1px;
+}
+
+.quote-big-heading {
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 900;
+    line-height: 1.05;
+    color: #1a1a1a;
+    letter-spacing: -2px;
+}
+
+.quote-lead-text {
+    font-size: 18px;
+    color: #1a1a1a;
+    max-width: 500px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.perks-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+/* 4. RIGHT FORM CARD */
+.quote-card-form {
+    background: #ffffff;
+    border: 3px solid #1a1a1a;
+    border-radius: 24px;
+    padding: 40px 32px;
+    box-shadow: 8px 8px 0px #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-title {
+    font-size: 22px;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+
+
+
+/* Seal the gap between quote and projects sections */
+.quote-fullwidth-section {
+    margin-bottom: 0;
+}
+
+.projects-fullwidth-section {
+    margin-top: 0;
+    padding-top: 60px;
+    /* Reduces extra white space */
+}
+
+/* Full-Bleed Section Canvas */
+.projects-fullwidth-section {
+    position: relative;
+    width: 99vw;
+    margin-top: -100px;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    background: #fdfbf7;
+    padding: 120px 0;
+    border-top: 4px solid #1a1a1a;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.project-star {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    font-size: 32px;
+    color: #e69f1c;
+    transform: rotate(15deg);
+    pointer-events: none;
+}
+
+.projects-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Header */
+.projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.projects-title {
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 900;
+    color: #1a1a1a;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.projects-title .accent-dot {
+    color: #176b4f;
+}
+
+.projects-lead {
+    font-size: 18px;
+    color: #555555;
+    max-width: 440px;
+    line-height: 1.5;
+}
+
+/* Showcase Stack */
+.showcase-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.showcase-card {
+    border: 3.5px solid #1a1a1a;
+    border-radius: 36px;
+    box-shadow: 10px 10px 0px #1a1a1a;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 48px;
+    padding: 56px;
+    min-height: 520px;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.showcase-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 14px 14px 0px #1a1a1a;
+}
+
+/* Card Color Variants */
+.card-gold {
+    background: #e69f1c;
+    background: #f6f3eb;
+}
+
+.card-dark {
+    background: #176b4f;
+    /* Primary Green */
+}
+
+.card-light {
+    background: #ffffff;
+}
+
+/* Reverse Column Layout */
+.card-reverse {
+    grid-template-columns: 1.2fr 1fr;
+}
+
+/* Typography Variations */
+.showcase-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.step-num {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #1a1a1a;
+}
+
+.text-gold {
+    color: #e69f1c;
+}
+
+.text-light {
+    color: #ffffff;
+}
+
+.text-dim {
+    color: #e0e0e0;
+}
+
+.showcase-title {
+    font-size: clamp(32px, 3.5vw, 44px);
+    font-weight: 900;
+    color: #1a1a1a;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+}
+
+.showcase-text {
+    font-size: 17px;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.showcase-btn {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 800;
+    padding: 14px 24px;
+    border: 2.5px solid #1a1a1a;
+    border-radius: 14px;
+    text-decoration: none;
+    box-shadow: 4px 4px 0px #1a1a1a;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-dark {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+.btn-gold {
+    background: #e69f1c;
+    color: #1a1a1a;
+}
+
+.btn-green {
+    background: #176b4f;
+    color: #ffffff;
+}
+
+.showcase-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #1a1a1a;
+}
+
+/* Graphic Stage Space */
+.showcase-visual {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+}
+
+.graphic-stage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+/* .stage-mint {
+    background: #55efc4;
+    border: 3px solid #1a1a1a;
+} */
+
+/* Integrated Graphic Image (No box-shadow, fills space natively) */
+.integrated-graphic {
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border: none;
+    box-shadow: none;
+    filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.08));
+}
+
+.floating-symbol-cross {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    font-size: 28px;
+    color: #1a1a1a;
+}
+
+
+
+
+/* Container Spacing & Alignment */
+.workflow-clean-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Image Area Styling */
+.workflow-media {
+    width: 100%;
+    background: #eae6df;
+    border: 3px solid #1a1a1a;
+    border-radius: 20px;
+    box-shadow: 6px 6px 0px #1a1a1a;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 380px;
+}
+
+.workflow-raw-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Right Content Area */
+.workflow-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+}
+
+.workflow-headline {
+    font-size: clamp(38px, 4vw, 56px);
+    font-weight: 900;
+    color: #1a1a1a;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.workflow-points {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.point-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.point-row p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.workflow-link {
+    font-size: 15px;
+    font-weight: 800;
+    color: #176b4f;
+    text-decoration: none;
+    border-bottom: 2.5px solid #176b4f;
+    padding-bottom: 2px;
+}
+
+.workflow-cta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: 800;
+    padding: 10px 12px 10px 20px;
+    border: 2.5px solid #1a1a1a;
+    border-radius: 999px;
+    box-shadow: 3px 3px 0px #1a1a1a;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.workflow-cta-pill .arrow-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #176b4f;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.workflow-cta-pill:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px #1a1a1a;
+}
+
+
+
+
+
+
+
+
+/* Section Canvas: Spans full width edge-to-edge */
+.devs-community {
+    width: 100%;
+    background: #176b4f;
+    border: 4px solid #1a1a1a;
+    border-radius: 30px;
+    box-shadow: 6px 6px 0px #1a1a1a;
+    padding: 120px 0;
+    box-sizing: border-box;
+}
+
+/* Inner Container: Holds text centered & aligned with page limits */
+.devs-community-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+/* Headline */
+.devs-community-title {
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -2px;
+    line-height: 1.05;
+    margin: 0;
+}
+
+.devs-community-title .dot {
+    color: #e69f1c;
+    /* Gold Accent */
+}
+
+/* Subtitle */
+.devs-community-lead {
+    font-size: 18px;
+    font-weight: 500;
+    color: #f0ebe1;
+    max-width: 500px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* CTA Pill */
+.devs-community-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #e69f1c;
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 10px 12px 10px 20px;
+    border: 2.5px solid #1a1a1a;
+    border-radius: 999px;
+    box-shadow: 4px 4px 0px #1a1a1a;
+    text-decoration: none;
+    margin-top: 12px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.devs-community-cta .arrow-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #1a1a1a;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.devs-community-cta:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #1a1a1a;
+}
+
+@media screen and (max-width: 1024px) {
+
+    main,
+    .projects-inner,
+    .quote-fullwidth-inner,
+    .workflow-clean-inner,
+    .devs-community-inner {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .hero,
+    .quote-fullwidth-inner,
+    .workflow-clean-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .showcase-card,
+    .card-reverse {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .quote-star-shape,
+    .quote-pill-shape,
+    .quote-cross-shape {
+        display: none;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .step-1,
+    .step-2,
+    .step-3 {
+        transform: none;
+    }
+
+    .section-head,
+    .projects-header,
+    .footer-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .showcase-card {
+        padding: 32px;
+    }
+
+    .showcase-visual {
+        min-height: 260px;
+    }
+
+    .email-input-group {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+}

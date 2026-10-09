@@ -1,0 +1,230 @@
+/* COLOR THEME VARIATIONS */
+.theme-sky {
+  background-color: var(--sky) !important;
+}
+
+.theme-mint {
+  background-color: var(--mint) !important;
+}
+
+.theme-gold {
+  background-color: var(--acc-clr) !important;
+}
+
+.theme-paper {
+  background-color: var(--paper) !important;
+}
+
+.theme-dark {
+  background-color: var(--sec-clr) !important;
+  color: var(--paper) !important;
+}
+
+.theme-dark .process-title,
+.theme-dark .process-description {
+  color: var(--paper) !important;
+}
+
+/* HERO SECTION WITH MEGA GRAPHIC ANCHOR */
+.projects-intro {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: center;
+  gap: 40px;
+  overflow: visible;
+}
+
+.hero-visual-anchor {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mega-graphic {
+  width: 120%;
+  max-width: 550px;
+  height: auto;
+  transform: rotate(-3deg) translateY(-20px);
+  filter: drop-shadow(8px 8px 0px var(--sec-clr));
+  transition: transform 0.3s ease;
+}
+
+.mega-graphic:hover {
+  transform: rotate(0deg) translateY(-10px);
+}
+
+/* TIER SHOWCASE CARDS WITH BLEEDING IMAGES */
+.tier-section {
+  padding: 40px;
+  border: var(--border-thick);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-hard);
+}
+
+.tier-showcase-card {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  background: var(--paper);
+  border: var(--border-thick);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-visual-frame {
+  position: relative;
+  margin-right: -40px;
+  margin-bottom: -40px;
+}
+
+.bleeding-image {
+  width: 110%;
+  height: auto;
+  border: var(--border-thick);
+  border-radius: var(--radius-card) 0 0 0;
+  box-shadow: var(--shadow-hard);
+}
+
+/* PROCESS SECTION WITH MEGA FLOW GRAPHIC */
+.projects-process {
+  position: relative;
+  padding: 80px 40px;
+  border: var(--border-thick);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-hard-lg);
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.process-illustration-wrapper {
+  position: absolute;
+  top: 20px;
+  right: -50px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.mega-flow-graphic {
+  width: 600px;
+  height: auto;
+}
+
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.process-step-card {
+  padding: 28px;
+  border: var(--border-thick);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-hard);
+  color: var(--sec-clr);
+}
+
+/* IMPACT QUOTE WITH GRAPHIC STAMP */
+.impact-quote-card {
+  position: relative;
+  margin-top: 32px;
+  padding: 40px;
+  border: var(--border-thick);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-hard);
+  overflow: hidden;
+}
+
+.quote-bg-graphic {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 180px;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+/* FAQ COLOR DIVERSITY */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-item {
+  border: var(--border-thick);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-hard);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.faq-item:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-hard-lg);
+}
+
+.faq-question {
+  padding: 24px;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* BOTTOM CTA WITH EMBEDDED MEGA MOCKUP */
+.cta-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 60px;
+  border: var(--border-thick);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-hard-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.cta-visual-frame {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mega-cta-graphic {
+  width: 120%;
+  max-width: 480px;
+  height: auto;
+  border: var(--border-thick);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-hard);
+  transform: rotate(4deg) translate(20px, 20px);
+}
+
+/* RESPONSIVE LAYOUT */
+@media screen and (max-width: 900px) {
+  .projects-intro,
+  .tier-showcase-card,
+  .cta-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .mega-graphic,
+  .mega-cta-graphic {
+    width: 100%;
+    transform: none;
+  }
+
+  .card-visual-frame {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
