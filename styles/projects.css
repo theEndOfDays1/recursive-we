@@ -3287,7 +3287,7 @@ button.tier-nav-item.active {
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
   gap: 48px 40px; /* Increased vertical and horizontal grid spacing */
   margin-top: 24px;
   margin-bottom: 80px; /* Extra separation before the next section */
