@@ -199,6 +199,7 @@ header .cta-block {
 }
 .link-focused {
     color: var(--acc-clr);
+    color: #e6b55a;
 }
 
 
