@@ -3443,7 +3443,7 @@ button.tier-nav-item.active {
   border-radius: var(--radius-btn, 12px);
   box-shadow: var(--shadow-hard, 4px 4px 0px #111111);
   cursor: pointer;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.05em;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
   display: inline-flex;
