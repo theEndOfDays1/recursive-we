@@ -147,68 +147,105 @@
   padding-bottom: 80px;
 }
 
-.portfolio-header {
+/* EDITORIAL PORTFOLIO HEADER */
+.portfolio-editorial-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 56px;
+  border-bottom: none;
+}
+
+.portfolio-header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 720px;
+}
+
+.portfolio-massive-title {
+  font-family: var(--ideal-ff), sans-serif;
+  font-size: clamp(44px, 5.5vw, 68px);
+  font-weight: 1000;
+  line-height: 0.95;
+  color: var(--sec-clr);
+  letter-spacing: -2px;
+  margin: 0;
+}
+
+.portfolio-header-lead {
+  font-size: 18px;
+  font-weight: 500;
+  color: #555555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* TIER FILTER PILLS (Positioned Down, Natural Width Wrap) */
+.portfolio-header-right {
+  width: 100%;
+}
+
+.tier-filter-pills {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 32px;
+  gap: 10px;
+  justify-content: flex-start;
+  max-width: 800px;
 }
 
-.portfolio-header .title {
-  margin: 0;
-  color: var(--sec-clr, #2d3436);
-  font-family: "Inter Extra Bold", "Inter Bold", var(--ideal-ff), sans-serif;
-  font-size: clamp(32px, 3.5vw, 48px);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-.portfolio-header .filter-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.portfolio-header .filter-label {
-  color: var(--sec-clr, #2d3436);
-  font-family: "Inter Bold", var(--ideal-ff), sans-serif;
-  font-size: 13px;
+.tier-pill {
+  background: var(--paper);
+  border: 2px solid var(--sec-clr);
+  border-radius: var(--radius-btn);
+  padding: 10px 16px;
+  font-family: var(--ideal-ff);
+  font-size: 14px;
   font-weight: 800;
-  letter-spacing: 0.05em;
-}
-
-.portfolio-header .filter-select {
-  appearance: none;
-  padding: 10px 18px;
-  color: var(--sec-clr, #2d3436);
-  background-color: var(--prm-clr, #f8f8ff);
-  font-family: var(--ideal-ff), "Inter Regular", sans-serif;
-  font-size: 0.95rem;
-  font-weight: 700;
-  border: var(--border-thick, 2px solid #2d3436);
-  border-radius: var(--radius-btn, 12px);
-  box-shadow: var(--shadow-hard, 4px 4px 0 #2d3436);
+  color: var(--sec-clr);
+  box-shadow: 3px 3px 0px var(--sec-clr);
   cursor: pointer;
-  outline: none;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
-.portfolio-header .filter-select::-ms-expand {
-  display: none;
+.tier-pill:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px var(--sec-clr);
+  background: #ffffff;
 }
 
-.portfolio-header .filter-select:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: var(--shadow-hard-lg, 6px 6px 0 #2d3436);
-}
-
-.portfolio-header .filter-select:active {
+.tier-pill.active {
+  background: var(--try-clr);
+  color: #ffffff;
   transform: translate(1px, 1px);
-  box-shadow: 2px 2px 0 var(--sec-clr, #2d3436);
+  box-shadow: 2px 2px 0px var(--sec-clr);
+}
+
+/* PROMINENT ASYMMETRIC STAGGERING ON MOBILE */
+@media screen and (max-width: 900px) {
+  .tier-filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Natural staggered offset effect using structural nth-child rules */
+  .tier-pill:nth-child(1) {
+    transform: rotate(-1.5deg) translateY(0px);
+  }
+  .tier-pill:nth-child(2) {
+    transform: rotate(2deg) translateY(4px);
+    margin-left: 8px;
+  }
+  .tier-pill:nth-child(3) {
+    transform: rotate(-1deg) translateY(-2px);
+  }
+  .tier-pill:nth-child(4) {
+    transform: rotate(1.5deg) translateY(6px);
+    margin-left: 12px;
+  }
 }
 
 .portfolio-grid {
@@ -287,6 +324,7 @@
   right: 16px;
   color: var(--sec-clr, #2d3436);
   background-color: var(--acc-clr, #e69f1c);
+  display: none;
 }
 
 .portfolio-grid .card-overlay {
@@ -353,7 +391,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 .load-more-btn {
