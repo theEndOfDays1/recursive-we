@@ -127,7 +127,7 @@
 
 .badge-top-left {
   top: -14px;
-  left: -12px;
+  left: -8px;
   background: #a3e635;
   transform: rotate(-5deg);
 }
@@ -439,7 +439,7 @@
 
 .projects-impact,
 .projects-faq {
-  gap: 40px;
+  gap: 25px;
 }
 
 .process-header,
@@ -809,5 +809,46 @@
 
   .faq-answer {
     padding: 0 20px 16px;
+  }
+}
+
+/* --- FAQ SIDE-BY-SIDE LAYOUT --- */
+.projects-faq-content-wrap {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+.projects-faq .faq-list {
+  width: 100%;
+  max-width: none;
+}
+
+.projects-faq-image-side {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-faq-image-side img {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Responsive stacking for mobile devices */
+@media screen and (max-width: 900px) {
+  .projects-faq-content-wrap {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .projects-faq-image-side img {
+    max-width: 300px;
   }
 }
