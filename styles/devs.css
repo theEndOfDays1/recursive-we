@@ -1,0 +1,314 @@
+.detail-hero, .workflow-detail-section, .workflow-proof-section, .devs-detail-section, .devs-steps-section {
+    width: min(90%, 1200px);
+    margin: 0 auto
+}
+
+.detail-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+    gap: clamp(32px, 7vw, 110px);
+    align-items: center;
+    padding: clamp(70px, 10vw, 140px) 0 80px
+}
+
+.detail-hero-copy {
+    max-width: 720px
+}
+
+.detail-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid var(--sec-clr);
+    border-radius: 999px;
+    padding: 7px 12px;
+    background: var(--paper);
+    box-shadow: 3px 3px 0 var(--sec-clr);
+    font: 800 12px/1 var(--ideal-ff);
+    letter-spacing: .08em
+}
+
+.detail-hero h1 {
+    margin: 24px 0 22px;
+    font: 900 clamp(52px, 8vw, 110px)/.9 var(--ideal-ff);
+    letter-spacing: -.07em
+}
+
+.green-text {
+    color: var(--try-clr)
+}
+
+.detail-hero p {
+    max-width: 610px;
+    color: #4b5051;
+    font-size: clamp(17px, 2vw, 21px);
+    line-height: 1.55
+}
+
+.detail-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 30px
+}
+
+.detail-btn {
+    display: inline-flex;
+    gap: 14px;
+    align-items: center;
+    padding: 14px 18px;
+    border: 2px solid var(--sec-clr);
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 var(--sec-clr);
+    font-weight: 800;
+    transition: transform .15s ease, box-shadow .15s ease
+}
+
+.detail-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--sec-clr)
+}
+
+.detail-btn-primary {
+    background: var(--try-clr);
+    color: #fff
+}
+
+.detail-btn-secondary {
+    background: var(--paper)
+}
+
+.workflow-stamp, .devs-signal-card {
+    border: 3px solid var(--sec-clr);
+    box-shadow: 8px 8px 0 var(--sec-clr);
+    border-radius: 24px;
+    background: var(--acc-clr);
+    padding: clamp(24px, 5vw, 54px);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 18px;
+    transform: rotate(2deg)
+}
+
+.workflow-stamp span {
+    font: 800 14px var(--ideal-ff)
+}
+
+.workflow-stamp strong {
+    font: 900 clamp(28px, 4vw, 54px)/.9 var(--ideal-ff)
+}
+
+.workflow-stamp small {
+    grid-column: 2;
+    font-size: 14px;
+    margin-bottom: 20px
+}
+
+.workflow-detail-section {
+    padding: 40px 0 100px
+}
+
+.detail-section-heading {
+    margin-bottom: 42px
+}
+
+.detail-section-heading h2, .workflow-proof-section h2, .devs-steps-section h2 {
+    margin-top: 24px;
+    font: 900 clamp(44px, 6vw, 76px)/.94 var(--ideal-ff);
+    letter-spacing: -.06em
+}
+
+.workflow-stage-grid, .devs-fit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px
+}
+
+.workflow-stage-card, .devs-fit-grid article {
+    border: 2px solid var(--sec-clr);
+    border-radius: 20px;
+    box-shadow: 5px 5px 0 var(--sec-clr);
+    padding: 28px;
+    min-height: 290px
+}
+
+.stage-card-cream {
+    background: var(--paper)
+}
+
+.stage-card-mint {
+    background: var(--mint)
+}
+
+.stage-card-sky {
+    background: var(--sky)
+}
+
+.stage-number, .fit-index {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--sec-clr);
+    border-radius: 12px;
+    background: var(--try-clr);
+    color: #fff;
+    font-weight: 900
+}
+
+.workflow-stage-card h3, .devs-fit-grid h3 {
+    margin: 28px 0 12px;
+    font: 900 28px/1 var(--ideal-ff);
+    letter-spacing: -.04em
+}
+
+.workflow-stage-card p, .devs-fit-grid p {
+    color: #424849;
+    line-height: 1.55
+}
+
+.workflow-stage-card ul {
+    padding: 18px 0 0 18px;
+    margin: 0;
+    line-height: 1.9;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.workflow-proof-section, .devs-steps-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 80px 0 120px
+}
+
+.proof-list {
+    border-top: 2px solid var(--sec-clr)
+}
+
+.proof-list p {
+    border-bottom: 2px solid var(--sec-clr);
+    padding: 20px 0;
+    font-size: 18px
+}
+
+.proof-list strong {
+    color: var(--try-clr);
+    margin-right: 16px
+}
+
+.devs-signal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--try-clr);
+    color: #fff;
+    transform: rotate(-2deg)
+}
+
+.signal-label {
+    font: 800 12px var(--ideal-ff);
+    letter-spacing: .08em;
+    background: var(--acc-clr);
+    color: var(--sec-clr);
+    padding: 7px 10px;
+    border: 2px solid var(--sec-clr);
+    box-shadow: 3px 3px 0 var(--sec-clr)
+}
+
+.devs-signal-card strong {
+    margin: 48px 0 28px;
+    font: 900 clamp(45px, 6vw, 82px)/.82 var(--ideal-ff);
+    letter-spacing: -.07em
+}
+
+.devs-signal-card strong span {
+    color: var(--acc-clr)
+}
+
+.devs-signal-card small {
+    font-size: 14px
+}
+
+.devs-detail-section {
+    padding: 40px 0 100px
+}
+
+.devs-fit-grid article:nth-child(1) {
+    background: var(--paper)
+}
+
+.devs-fit-grid article:nth-child(2) {
+    background: var(--mint)
+}
+
+.devs-fit-grid article:nth-child(3) {
+    background: var(--sky)
+}
+
+.devs-steps-section {
+    background: var(--acc-clr);
+    max-width: none;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-top: 2px solid var(--sec-clr);
+    border-bottom: 2px solid var(--sec-clr)
+}
+
+.devs-steps-section ol {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.devs-steps-section li {
+    display: grid;
+    grid-template-columns: minmax(140px, .6fr) 1fr;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--sec-clr)
+}
+
+.devs-steps-section li:first-child {
+    border-top: 2px solid var(--sec-clr)
+}
+
+.devs-steps-section strong {
+    font: 900 22px var(--ideal-ff)
+}
+
+@media(max-width:760px) {
+    .detail-hero, .workflow-proof-section, .devs-steps-section {
+        grid-template-columns: 1fr
+    }
+
+    .workflow-stage-grid, .devs-fit-grid {
+        grid-template-columns: 1fr
+    }
+
+    .detail-hero {
+        padding-top: 60px
+    }
+
+    .workflow-stamp, .devs-signal-card {
+        max-width: 520px
+    }
+
+    .devs-steps-section {
+        padding-left: 5%;
+        padding-right: 5%
+    }
+}
+
+@media(max-width:500px) {
+    .detail-hero h1 {
+        font-size: 54px
+    }
+
+    .devs-steps-section li {
+        grid-template-columns: 1fr;
+        gap: 6px
+    }
+}
