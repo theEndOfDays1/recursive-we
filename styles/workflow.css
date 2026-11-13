@@ -20,6 +20,7 @@
 .detail-hero h1 {
   margin: 0 0 16px;
   font: 900 clamp(32px, 5vw, 70px)/1.05 var(--ideal-ff, sans-serif);
+  font-size: clamp(42px, 5.5vw, 70px);
   letter-spacing: -.03em;
   color: var(--sec-clr, #111);
 }
@@ -203,8 +204,8 @@
   flex-direction: column;
   gap: 0;
   width: 100%;
-  border-top: 3.5px solid var(--sec-clr, #111);
-  margin-top: 24px;
+  /* border-top: 3.5px solid var(--sec-clr, #111);
+  margin-top: 24px; */
 }
 
 /* Open split row layout */
@@ -268,6 +269,7 @@
   margin: 8px 0 0;
   color: var(--sec-clr, #111);
   font-size: clamp(22px, 2.5vw, 30px);
+  font-family: 'Inter Extra Bold', var(--ideal-ff), sans-serif;
   font-weight: 1000;
   line-height: 1.1;
   letter-spacing: -0.04em;
@@ -344,6 +346,97 @@
   }
 
 }
+
+
+
+/* Add right after .detail-hero-actions in workflow.css */
+.workflow-stamp {
+  width: 100%;
+  max-width: 440px;
+  justify-self: center;
+}
+
+.workflow-stamp img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   RESPONSIVE LAYOUT (HERO & WORKFLOW)
+========================================= */
+
+@media screen and (max-width: 900px) {
+  .detail-hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-top: 32px;
+  }
+
+  .workflow-stamp {
+    max-width: 360px;
+    justify-self: start;
+  }
+
+  .workflow-section {
+    padding: 60px 0;
+    gap: 32px;
+  }
+
+  .step-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 32px 16px;
+  }
+
+  .step-card:hover {
+    padding-left: 20px;
+    border-left-width: 6px;
+  }
+
+  .step-num {
+    font-size: 32px;
+  }
+
+  .step-card h3 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .detail-hero p,
+  .workflow-header p {
+    font-size: 16px;
+  }
+
+  .detail-hero-actions {
+    flex-direction: column;
+  }
+
+  .detail-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .workflow-tabs {
+    gap: 8px;
+  }
+
+  .tab-btn {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* =========================================
@@ -1007,3 +1100,195 @@
   background: var(--paper, #f5f1e8);
 }
 
+
+
+
+
+/* =========================================
+   AFTERCARE SECTION
+========================================= */
+
+.aftercare-section {
+  padding: clamp(28px, 5vw, 55px);
+  border: 3px solid #171717;
+  border-radius: var(--radius-card);
+  background: var(--paper);
+  box-shadow: 6px 6px 0 #171717;
+}
+
+/* INTRO */
+
+.aftercare-copy {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  column-gap: clamp(25px, 5vw, 65px);
+  align-items: end;
+  margin-bottom: 42px;
+}
+
+.aftercare-copy .section-eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: 16px;
+}
+
+.aftercare-copy h2 {
+  max-width: 550px;
+  margin: 0;
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  line-height: .98;
+  letter-spacing: -.055em;
+  font-weight: 800;
+}
+
+.aftercare-copy p {
+  max-width: 420px;
+  margin: 0 0 22px;
+  line-height: 1.7;
+}
+
+.aftercare-copy .detail-btn {
+  grid-column: 2;
+  justify-self: start;
+}
+
+/* CARD COLLECTION */
+
+.aftercare-list {
+  display: grid;
+  /* gap: 20px; */
+}
+
+/* INDIVIDUAL CARDS */
+
+.aftercare-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 130px;
+  align-items: center;
+  min-height: 175px;
+  padding: 30px 35px;
+  border: 3px solid #171717;
+  background: #faf9f5;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* CARD CONTENT */
+
+.aftercare-item > div {
+  grid-column: 1;
+  grid-row: 1;
+  max-width: 650px;
+}
+
+.aftercare-item h3 {
+  margin: 0 0 12px;
+  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+  line-height: 1.1;
+  letter-spacing: -.04em;
+  font-weight: 800;
+}
+
+.aftercare-item p {
+  max-width: 600px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* OVERSIZED CARD NUMBERS */
+
+.aftercare-index {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  line-height: 1;
+  letter-spacing: -.09em;
+  font-weight: 900;
+  color: #d8d6cc;
+  -webkit-text-stroke: 2px #171717;
+}
+
+/* SUBTLE INDIVIDUAL CARD IDENTITIES */
+
+.aftercare-item:nth-child(1) {
+  background: #f1f3ec;
+  border-top-left-radius: var(--radius-card);
+  border-top-right-radius: var(--radius-card);
+  border-bottom: none;
+}
+
+.aftercare-item:nth-child(1) .aftercare-index {
+  color: #d5dfca;
+}
+
+.aftercare-item:nth-child(2) {
+  background: #f8f3e9;
+}
+
+.aftercare-item:nth-child(2) .aftercare-index {
+  color: #e9dfc7;
+}
+
+.aftercare-item:nth-child(3) {
+  background: #f0f0ed;
+  border-bottom-left-radius: var(--radius-card);
+  border-bottom-right-radius: var(--radius-card);
+  border-top: none;
+}
+
+.aftercare-item:nth-child(3) .aftercare-index {
+  color: #d9dcd6;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .aftercare-copy {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .aftercare-copy .section-eyebrow {
+    margin-bottom: 0;
+  }
+
+  .aftercare-copy p {
+    margin-bottom: 0;
+  }
+
+  .aftercare-copy .detail-btn {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 550px) {
+  .aftercare-section {
+    padding: 24px 18px;
+  }
+
+  .aftercare-item {
+    grid-template-columns: minmax(0, 1fr) 65px;
+    min-height: 155px;
+    padding: 22px 18px;
+  }
+
+  .aftercare-index {
+    font-size: 3.2rem;
+    -webkit-text-stroke-width: 1.5px;
+  }
+
+  .aftercare-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .aftercare-item p {
+    font-size: .92rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aftercare-item {
+    transition: none;
+  }
+}
