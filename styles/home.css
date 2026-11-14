@@ -78,7 +78,6 @@
     align-items: center;
     justify-content: center;
     transition: all 0.15s ease;
-    width: 100%;
 }
 
 .hero-btn.primary {
@@ -877,9 +876,13 @@
         grid-template-columns: 1fr;
     }
 }
+@media screen and (max-width: 400px) {
+    .hero .cta a{
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 768px) {
-
     .quote-star-shape,
     .quote-pill-shape,
     .quote-cross-shape {
