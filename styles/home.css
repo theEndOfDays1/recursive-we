@@ -78,6 +78,7 @@
     align-items: center;
     justify-content: center;
     transition: all 0.15s ease;
+    width: 100%;
 }
 
 .hero-btn.primary {
